@@ -1,6 +1,6 @@
 # 📦 Supply Chain Analysis & Performance Dashboard
 
-## 📌 Project Overview
+##  Project Overview
 
 This project focuses on analyzing supply chain operations to identify patterns and insights related to sales, products, customers, suppliers, warehouses, shipping performance, delivery delays, and returns.
 
@@ -10,7 +10,7 @@ An interactive Power BI dashboard was created to present the analysis and provid
 
 ---
 
-## 🎯 Business Problem
+##  Business Problem
 
 Supply chain teams need to monitor sales, delivery performance, supplier efficiency, product demand, and customer satisfaction to ensure smooth operations.
 
@@ -27,7 +27,7 @@ This project aims to answer questions such as:
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 The dataset contains order-level supply chain information including:
 
@@ -53,7 +53,7 @@ The dataset contains order-level supply chain information including:
 
 ---
 
-## 🛠️ Tools & Technologies
+##  Tools & Technologies
 
 - Python
 - Pandas
@@ -66,7 +66,7 @@ The dataset contains order-level supply chain information including:
 
 ---
 
-## 🔍 Data Analysis
+##  Data Analysis
 
 The analysis includes:
 
@@ -122,7 +122,7 @@ The interactive dashboard provides:
 
 ---
 
-## 💡 Key Business Insights
+##  Key Business Insights
 
 The analysis helps identify:
 
@@ -136,7 +136,7 @@ The analysis helps identify:
 
 ---
 
-## 🎯 Business Recommendations
+##  Business Recommendations
 
 Based on the analysis, businesses can:
 
