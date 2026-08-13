@@ -1,614 +1,325 @@
-Supply Chain & Delivery Performance Analysis
-1. Project Overview
+📦 Supply Chain & Delivery Performance Analysis
+📌 Project Overview
 
-This project focuses on analyzing supply chain and delivery performance to understand how efficiently orders are being delivered and where operational problems are affecting revenue, customer satisfaction, and returns.
+The Supply Chain & Delivery Performance Analysis project focuses on analyzing order, delivery, revenue, supplier, and customer satisfaction data to identify operational bottlenecks and understand how delivery performance affects business outcomes.
 
-The main purpose of this project was not only to analyze the data but to understand the business story behind the data.
+The project analyzes 3,000+ orders generating ₹74.17M in revenue and uses Python and Power BI to transform raw operational data into meaningful business insights.
 
-I wanted to answer questions such as:
+The main goal was to answer questions such as:
 
-Are orders being delivered on time?
-Which regions and product categories generate the most revenue?
-Which suppliers have higher delivery delays?
-Which warehouses may have delivery bottlenecks?
-Which shipping modes perform better?
-Are delayed orders more likely to be returned?
-Does delivery performance affect customer ratings?
-Where can the business improve its supply-chain operations?
+How efficiently are orders being delivered?
+What percentage of orders are delayed?
+Which product categories generate the most revenue?
+Which regions contribute the most revenue?
+Which shipping modes experience more delivery issues?
+Which suppliers have higher average delivery delays?
+Is poor delivery performance associated with customer returns?
+How can the company improve its delivery operations?
+🎯 Business Problem
 
-The project helped me understand how a Data Analyst can take raw operational data, clean it, analyze it, identify patterns, and convert those patterns into business recommendations.
+A supply chain company receives thousands of orders across different regions, suppliers, products, warehouses, and shipping modes.
 
-2. Business Problem
+However, raw order data does not immediately show where operational problems are occurring.
 
-In a supply-chain business, generating revenue is important, but delivering the order on time is equally important.
+The business needs to understand:
 
-A company may have strong revenue and a large number of orders, but if customers are receiving their orders late, it can lead to:
+Delivery delays
+On-time delivery performance
+Supplier performance
+Shipping-mode performance
+Revenue contribution by product and region
+Customer returns
+Customer satisfaction
 
-Customer dissatisfaction
-Product returns
-Lower customer ratings
-Poor supplier performance
-Increased logistics costs
-Inefficient warehouse operations
-Loss of customer trust
+Without proper analysis, management may find it difficult to identify the major bottlenecks and decide where operational improvements are required.
 
-The business therefore needs to understand where delivery problems are happening and how they are connected to customer and business outcomes.
+Problem Statement
 
-Core Business Question
+Analyze supply chain and delivery data to identify delivery bottlenecks, revenue drivers, supplier performance issues, and relationships between delivery performance and customer outcomes, and present the findings through an interactive Power BI dashboard.
 
-Are we delivering orders on time, and where are the bottlenecks in our supply chain that may be affecting revenue and customer trust?
+🎯 Project Objectives
 
-3. Project Objective
+The major objectives of this project were:
 
-The main objective of this project was to analyze order-level supply-chain data and evaluate:
+Analyze overall delivery performance.
+Measure on-time, delayed, and early deliveries.
+Identify revenue-generating product categories.
+Compare revenue performance across regions.
+Analyze delivery performance across shipping modes.
+Evaluate supplier delivery performance.
+Analyze returns based on delivery status.
+Understand customer satisfaction using ratings.
+Build an interactive dashboard for business users.
+Provide actionable recommendations for improving supply chain performance.
+📊 Dataset
 
-Revenue Performance
-Total revenue
-Revenue by region
-Revenue by product category
-Revenue by product
-Delivery Performance
-On-Time, Delayed, and Early orders
-Average delivery delay
-Delivery performance by supplier
-Delivery performance by warehouse
-Delivery performance by shipping mode
-Customer Experience
-Customer ratings
-Relationship between delivery performance and ratings
-Return behavior
-Business Performance
-Identify potential supply-chain bottlenecks
-Identify areas requiring operational improvement
-Provide data-driven recommendations
-4. Dataset
-
-The dataset contains order-level supply-chain information where each row represents an order.
-
-The dataset contains approximately 3,000 orders and includes information about customers, products, suppliers, warehouses, shipping, revenue, delivery performance, returns, and customer ratings.
+The dataset contains 3,000+ order records with information related to customers, products, suppliers, delivery performance, revenue, returns, and customer ratings.
 
 Important Columns
+Category	Columns
+Order Information	Order_ID, Order_Date, Customer_ID
+Customer	Customer_Region, Customer_City, Customer_Rating
+Product	Product_Category, Product_Name
+Supplier	Supplier_Name
+Logistics	Shipping_Mode, Warehouse_Location
+Order Metrics	Quantity, Unit_Price, Total_Revenue
+Delivery	Expected_Delivery_Days, Actual_Delivery_Days, Delay_Days, Delivery_Status
+Returns	Return_Status
+🛠️ Tools & Technologies
+Python
+Pandas
+NumPy
+Matplotlib
+Business Intelligence
+Power BI
+DAX
+Interactive filters and KPI cards
+Data Analysis
+Data Cleaning
+Exploratory Data Analysis (EDA)
+Aggregation
+KPI Analysis
+Business Insight Generation
+Version Control
+Git
+GitHub
+🔄 Project Methodology
 
-Order Information
+The project followed an end-to-end data analysis workflow:
 
-Order ID
-Order Date
-Customer ID
+Raw Dataset
+     ↓
+Data Cleaning
+     ↓
+Data Validation
+     ↓
+Exploratory Data Analysis
+     ↓
+Feature/KPI Analysis
+     ↓
+Business Analysis
+     ↓
+Power BI Dashboard
+     ↓
+Insights
+     ↓
+Business Recommendations
+🧹 Data Cleaning & Preparation
 
-Customer Information
+The raw dataset was first inspected to understand its structure and identify potential data-quality issues.
 
-Customer Region
-Customer City
+The preparation process included:
 
-Product Information
+Checking missing values
+Checking duplicate records
+Validating data types
+Checking numerical columns for consistency
+Validating delivery-related fields
+Checking categorical values
+Preparing the dataset for analysis and visualization
+
+The delivery-related fields were particularly important because they were used to evaluate whether orders were delivered on time, early, or late.
+
+⚙️ Analytical Approach
+
+I analyzed the dataset from multiple business perspectives.
+
+1. Delivery Performance
+
+I analyzed:
+
+On-Time deliveries
+Delayed deliveries
+Early deliveries
+Average delivery delay
+2. Revenue Analysis
+
+I analyzed revenue by:
 
 Product Category
-Product Name
-Quantity
-Unit Price
-Total Revenue
+Customer Region
+3. Logistics Analysis
 
-Supplier & Logistics Information
+I compared delivery performance across:
 
-Supplier Name
-Shipping Mode
-Warehouse Location
+Shipping Modes
+Suppliers
+4. Customer Outcome Analysis
 
-Delivery Information
+I analyzed:
 
-Expected Delivery Days
-Actual Delivery Days
-Delay Days
-Delivery Status
+Returns by delivery status
+Customer ratings
+Delivery performance in relation to customer outcomes
+📊 Power BI Dashboard
 
-Customer Experience
+The final analysis was presented through an interactive Power BI dashboard.
 
-Return Status
-Customer Rating
+Dashboard Preview
 
-This structure allowed me to analyze the supply chain from multiple business perspectives instead of looking at only revenue or delivery performance.
+![Supply Chain & Delivery Performance Dashboard](supply chain analysis.png)
+📊 Power BI Dashboard
 
-5. Approach
+The dashboard provides an interactive view of revenue, delivery performance, logistics performance, supplier delays, and customer outcomes.
 
-I followed an end-to-end Data Analyst workflow.
+Dashboard Features
 
-Overall Process
-
-Raw Data → Data Cleaning → Exploratory Data Analysis → SQL Analysis → Python Analysis → Visualization → Power BI Dashboard → Business Insights → Recommendations
-
-I divided the project into different stages so that I could first make the data reliable and then use it for analysis.
-
-6. Data Cleaning
-
-Before starting the analysis, I first inspected the dataset to understand its structure and quality.
-
-I checked:
-
-Number of rows and columns
-Data types
-Missing values
-Duplicate records
-Numerical statistics
-Date formats
-Categorical values
-
-I also made sure that important numerical columns such as revenue, quantity, delivery days, and ratings were stored correctly.
-
-The Order Date column was checked and converted into the appropriate date format so that I could perform time-based analysis.
-
-Duplicate records and missing values were also checked and handled appropriately.
-
-Why Data Cleaning Was Important
-
-If the data contains duplicate orders or incorrect data types, the final analysis can become misleading.
-
-For example, duplicate orders could artificially increase:
-
-Total revenue
-Number of orders
-Quantity sold
-Delivery counts
-
-Therefore, I treated data cleaning as an important first step before performing any business analysis.
-
-7. Exploratory Data Analysis
-
-After cleaning the data, I started exploring the dataset to understand the overall business performance.
-
-I first looked at:
+The dashboard includes:
 
 Total Revenue
 Total Orders
-Total Quantity
-Average Customer Rating
+On-Time Delivery Rate
 Average Delivery Delay
+Average Customer Rating
+Delivery Status Distribution
+Revenue by Product Category
+Delivery Performance by Shipping Mode
+Revenue by Region
+Returns by Delivery Status
+Average Delivery Delay by Supplier
 
-After understanding the overall numbers, I moved towards more detailed business questions.
+Interactive filters allow users to analyze the dashboard based on:
 
-8. Revenue Analysis
+Delivery Status
+Customer Region
+Shipping Mode
+Product Category
+📈 Key KPIs
+KPI	Result
+Total Orders	3K+
+Total Revenue	₹74.17M
+On-Time Delivery	62.60%
+Average Delivery Delay	0.88 days
+Average Customer Rating	3.94 / 5
+🔍 Key Insights
+1. Delivery Performance
 
-The first major area I analyzed was revenue.
+The dashboard shows that 62.60% of orders were delivered on time.
 
-I wanted to understand:
+At the same time, approximately one-third of orders were delayed, making delivery performance one of the major areas requiring operational attention.
 
-Where is the revenue coming from?
+This indicates that improving delivery reliability could be an important opportunity for the business.
 
-I analyzed revenue across:
+2. Revenue by Product Category
 
-Customer regions
-Product categories
-Products
-Suppliers
+The analysis shows that Electronics, Grocery, and Clothing are among the strongest revenue-generating categories, each contributing approximately ₹15M.
 
-This helped identify the major revenue contributors.
+Furniture and Sports also contribute significant revenue at approximately ₹14M each.
 
-For example, if one region or product category generates significantly more revenue than others, that area becomes particularly important from a business perspective.
+Business Interpretation
 
-A supply-chain disruption in a high-revenue region or category could have a larger financial impact on the business.
+The company should maintain product availability and supply reliability for high-revenue categories because disruptions in these categories could have a larger impact on overall revenue.
 
-9. Delivery Performance Analysis
+3. Revenue by Region
 
-After revenue analysis, I moved towards the logistics side of the business.
+The dashboard shows relatively strong revenue contribution across all five regions.
 
-The main question was:
+North — ₹15.4M
+Central — ₹15.2M
+South — ₹14.9M
+East — ₹14.4M
+West — ₹14.3M
+Business Interpretation
 
-Are orders actually reaching customers on time?
+The revenue distribution is relatively balanced, meaning the business is not completely dependent on one geographical region.
 
-I analyzed the Delivery Status to understand the distribution of:
+The North and Central regions are currently the strongest revenue contributors.
 
-On-Time orders
-Delayed orders
-Early orders
+4. Shipping Mode Performance
 
-I also calculated the percentage distribution to make the comparison easier.
-
-This helped me understand the overall delivery efficiency of the business.
-
-10. Supplier Performance Analysis
-
-Next, I wanted to understand whether delivery delays were concentrated around specific suppliers.
-
-I compared suppliers based on their average delivery delay.
-
-This allowed me to identify suppliers that showed relatively higher delivery delays.
-
-I did not directly conclude that a supplier was “bad” based only on this analysis.
-
-Instead, I treated high average delay as a potential area for further investigation.
-
-The business could then review supplier performance, delivery agreements, transportation arrangements, or service-level expectations.
-
-11. Warehouse Performance Analysis
-
-I also analyzed delivery delays based on warehouse locations.
-
-The objective was to understand whether some warehouses were experiencing higher delivery delays than others.
-
-If a particular warehouse consistently shows higher delays, it can indicate a possible operational bottleneck.
-
-The business could then investigate:
-
-Inventory availability
-Warehouse processing time
-Order handling
-Dispatch operations
-Transportation connectivity
-12. Shipping Mode Analysis
-
-Another important part of the project was comparing different shipping modes.
-
-The dataset contains shipping methods such as:
+The dashboard compares delivery performance across:
 
 Air
 Road
-Rail
 Sea
+Rail
 
-I compared these modes based on delivery performance.
+Air has the highest number of orders in the displayed comparison, while each shipping mode shows a combination of on-time, delayed, and early deliveries.
 
-This helped me understand which transportation methods had better or weaker delivery consistency.
+Business Interpretation
 
-This analysis can help the business evaluate whether transportation planning or shipping-mode allocation needs improvement.
+Shipping mode performance should be monitored not only based on order volume but also on delay rates and operational cost.
 
-13. Delivery and Return Analysis
+The business could investigate whether higher-volume modes are also responsible for a disproportionate number of delays.
 
-One of the most important analyses in this project was understanding the relationship between delivery performance and returns.
+5. Supplier Performance
 
-I wanted to answer:
+The supplier analysis shows differences in average delivery delay.
 
-Are delayed orders more likely to be returned?
+The displayed suppliers include:
 
-I compared:
+ReliableGoods — 0.97 days
+QuickMart Ltd — 0.93 days
+SwiftVendors — 0.84 days
+FastSupply Co — 0.83 days
+MegaSource Inc — 0.79 days
+Business Interpretation
 
-Delivery Status → Return Status
+The suppliers with higher average delays should be investigated further.
 
-This allowed me to see the number and percentage of returned orders among On-Time, Delayed, and Early deliveries.
+The company could review:
 
-This analysis is important because delivery problems may affect the customer's overall experience.
+Supplier lead times
+Warehouse processing
+Transportation arrangements
+Order volumes
+Delivery routes
 
-If delayed orders show a higher return rate, it can indicate that improving delivery reliability may help reduce customer dissatisfaction and returns.
+to identify the underlying cause of delays.
 
-I treated this as an association rather than direct causation, because the dataset alone cannot prove that delays directly cause returns.
+6. Returns and Delivery Performance
 
-14. Delivery and Customer Satisfaction Analysis
+The dashboard compares returned and non-returned orders across delivery statuses.
 
-I also wanted to understand whether delivery performance was related to customer satisfaction.
+This analysis helps the business investigate whether delivery problems are associated with customer returns.
 
-For this, I compared:
+Business Interpretation
 
-Delivery Status → Customer Rating
+If delayed orders show a higher proportion of returns than on-time orders, improving delivery reliability could potentially help reduce returns and improve customer satisfaction.
 
-I also analyzed customer ratings against the number of delay days.
+7. Customer Satisfaction
 
-The purpose was to determine whether customers experiencing greater delivery delays tend to provide lower ratings.
+The overall average customer rating is 3.94/5.
 
-This helped connect the operational side of the supply chain with the customer-experience side.
+This indicates that customer experience is reasonably positive overall, but there is still room to improve.
 
-15. Monthly Revenue Analysis
+Delivery performance can be one of the operational factors influencing customer experience, so delivery delays and customer ratings should be monitored together.
 
-I also analyzed revenue over time using the Order Date.
+💡 Business Recommendations
 
-This allowed me to understand:
+Based on the analysis, the following actions could be considered:
 
-Monthly revenue trends
-High-performing periods
-Changes in revenue over time
+1. Reduce Delivery Delays
 
-Time-based analysis is useful because it helps the business understand whether revenue is stable or changing across different periods.
+Investigate the major causes of delayed orders and focus on reducing avoidable delays.
 
-16. Tools Used
-Python
+2. Improve Supplier Monitoring
 
-I used Python as the main environment for data analysis.
+Create supplier-level performance tracking using:
 
-Pandas
+Average delay
+On-time delivery rate
+Return rate
+Order volume
+3. Optimize Shipping Modes
 
-I used Pandas for:
+Compare shipping modes based on:
 
-Data cleaning
-Grouping
-Aggregation
-Sorting
-Filtering
-Cross-tabulation
-Date-based analysis
-NumPy
+Delivery speed
+Delay rate
+Cost
+Order volume
 
-I used NumPy for numerical operations and supporting data-analysis tasks.
+and select the appropriate mode based on business requirements.
 
-Matplotlib
+4. Protect High-Revenue Categories
 
-I used Matplotlib to create visualizations and understand patterns in the data.
+Ensure sufficient inventory and reliable logistics for high-revenue product categories such as Electronics, Grocery, and Clothing.
 
-SQL
+5. Monitor Returns
 
-I used SQL to perform structured analysis such as:
+Track returns against delivery performance to determine whether delivery issues are contributing to customer dissatisfaction.
 
-Aggregations
-Grouping
-Filtering
-Ranking
-Delivery and supplier analysis
-Revenue analysis
-Excel
+6. Improve Customer Experience
 
-I used Excel for:
-
-Initial data handling
-Data validation
-Pivot-table analysis
-Summary analysis
-Supporting visualizations
-Power BI
-
-I used Power BI to create an interactive dashboard that presents the final business insights.
-
-17. Power BI Dashboard
-
-After completing the analysis, I created a Power BI dashboard to communicate the most important findings.
-
-The dashboard contains KPI cards for:
-
-Total Revenue
-Total Orders
-On-Time Delivery %
-Average Delay
-Average Customer Rating
-
-It also contains visualizations for:
-
-Revenue by Region
-Revenue by Product Category
-Delivery Status
-Average Delivery Delay by Supplier
-Delivery Performance by Shipping Mode
-Returns by Delivery Status
-
-The purpose of the dashboard was to allow a business user or decision-maker to understand the overall supply-chain performance quickly without going through the raw dataset.
-
-18. Key Business Insights
-
-The analysis provided several important insights.
-
-Revenue
-
-The company generated approximately ₹74.17 million in revenue across around 3,000 orders.
-
-This helped establish the overall scale of the business.
-
-Delivery
-
-The On-Time Delivery rate was approximately 62.60%.
-
-This means there is a significant opportunity to improve delivery consistency.
-
-The remaining orders include both delayed and early deliveries, so the issue is not only late delivery but also deviation from the expected delivery schedule.
-
-Supplier Performance
-
-Different suppliers showed different levels of delivery delay.
-
-Suppliers with consistently higher average delays can be considered potential areas for operational investigation.
-
-Shipping Performance
-
-Different shipping modes showed differences in delivery performance.
-
-This can help the business evaluate transportation strategies and identify modes that may require further investigation.
-
-Returns
-
-The analysis of Delivery Status against Return Status helped investigate whether delayed orders were associated with higher return rates.
-
-Customer Satisfaction
-
-Comparing delivery performance with customer ratings helped investigate whether delivery issues were reflected in customer satisfaction.
-
-19. Problems I Faced During the Project
-
-I faced several challenges while working on the project.
-
-Problem 1 — Understanding the Dataset
-
-Initially, there were many columns and it was difficult to understand which columns were actually important for business analysis.
-
-How I Solved It
-
-I divided the columns into business categories such as:
-
-Customer → Product → Revenue → Supplier → Logistics → Delivery → Customer Experience
-
-This made the dataset easier to understand.
-
-Problem 2 — Deciding What to Analyze
-
-Another challenge was that there were many possible combinations of columns.
-
-I initially focused too much on simply creating charts.
-
-How I Solved It
-
-I changed my approach and started asking business questions first.
-
-Instead of asking:
-
-“What chart can I make?”
-
-I started asking:
-
-“What business problem can this data help me answer?”
-
-This helped me create more meaningful analysis.
-
-Problem 3 — Understanding Relationships Between Variables
-
-It was not enough to calculate revenue or delivery counts.
-
-I wanted to understand how different parts of the supply chain were connected.
-
-How I Solved It
-
-I compared:
-
-Delivery Status with Return Status
-Delivery Status with Customer Rating
-Supplier with Delay
-Warehouse with Delay
-Shipping Mode with Delivery Status
-
-This helped me move from simple descriptive analysis toward more meaningful business analysis.
-
-Problem 4 — Choosing the Right Visualization
-
-I initially had many possible charts and it was difficult to decide what should go into the final dashboard.
-
-How I Solved It
-
-I selected visualizations based on the business question.
-
-For example:
-
-Revenue comparison → Bar/Column Chart
-Delivery distribution → Donut Chart
-Supplier delay → Bar Chart
-Shipping performance → Stacked Column Chart
-Returns vs Delivery → Comparison Chart
-
-I avoided putting unnecessary charts into the final dashboard.
-
-20. Business Recommendations
-
-Based on the analysis, I would recommend the following:
-
-1. Improve On-Time Delivery
-
-Since the on-time delivery rate is only around 62.60%, the company should focus on improving delivery reliability.
-
-2. Investigate High-Delay Suppliers
-
-Suppliers with consistently higher average delays should be reviewed for possible operational or service-level issues.
-
-3. Review Warehouse Bottlenecks
-
-Warehouses with higher average delays should be investigated to understand whether inventory handling, processing, or dispatch operations are contributing to delays.
-
-4. Optimize Shipping Modes
-
-Shipping modes with weaker delivery performance should be reviewed to determine whether alternative transportation methods or better route planning can improve delivery consistency.
-
-5. Monitor Delayed Orders
-
-Delayed orders should be closely monitored because delivery problems may be associated with higher return rates and lower customer satisfaction.
-
-6. Protect High-Revenue Areas
-
-High-revenue regions and product categories should receive strong supply-chain support because disruptions in these areas can have a greater financial impact.
-
-21. Overall Impact
-
-The main value of this project was that I moved from raw order-level data to business recommendations.
-
-Instead of only calculating revenue or creating charts, I tried to understand:
-
-What is happening?
-
-Then:
-
-Why might it be happening?
-
-And finally:
-
-What can the business do about it?
-
-The project helped me understand how different areas of supply-chain performance are connected.
-
-For example:
-
-Delivery Performance → Customer Experience → Returns → Business Impact
-
-This helped me develop a more business-oriented approach to data analysis.
-
-22. Key Learnings
-
-This project helped me strengthen my skills in:
-
-Data cleaning
-Exploratory Data Analysis
-Pandas
-NumPy
-SQL
-Excel
-Data visualization
-Power BI
-Dashboard design
-Business storytelling
-
-More importantly, I learned that a Data Analyst should not stop at finding numbers.
-
-The important part is to understand what those numbers mean for the business and communicate the findings clearly.
-
-23. Final Project Story
-
-The complete story of my project can be summarized as:
-
-“I started with raw supply-chain order data and first cleaned and validated it. I then analyzed revenue to understand the major business drivers. After that, I focused on delivery performance to identify delays and potential bottlenecks across suppliers, warehouses, and shipping modes. I then connected delivery performance with returns and customer ratings to understand the possible customer impact. Finally, I used Power BI to present the most important findings through an interactive dashboard and provided recommendations focused on improving delivery reliability, monitoring suppliers and warehouses, optimizing shipping methods, and protecting customer satisfaction.”
-
-24. Interview Presentation Flow
-
-For my final mock interview, I will present the project in this order:
-
-Business Problem
-
-↓
-
-Dataset
-
-↓
-
-Data Cleaning
-
-↓
-
-EDA
-
-↓
-
-Revenue Analysis
-
-↓
-
-Delivery Analysis
-
-↓
-
-Supplier & Warehouse Analysis
-
-↓
-
-Shipping Mode Analysis
-
-↓
-
-Returns & Customer Satisfaction
-
-↓
-
-Power BI Dashboard
-
-↓
-
-Key Insights
-
-↓
-
-Business Recommendations
-
-↓
-
-Challenges & Solutions
-
-↓
-
-Learning
-
-This structure allows me to explain not just what I built, but also why I built it, what I discovered, and how the analysis can help the business.
+Monitor customer ratings alongside delivery performance to identify operational factors affecting customer satisfaction.
