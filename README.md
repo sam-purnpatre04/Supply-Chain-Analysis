@@ -157,7 +157,8 @@ The final analysis was presented through an interactive Power BI dashboard.
 
 Dashboard Preview
 
-![Supply Chain & Delivery Performance Dashboard](supply chain analysis.png)
+![Supply Chain & Delivery Performance Dashboard](dashboard.png)
+
 📊 Power BI Dashboard
 
 The dashboard provides an interactive view of revenue, delivery performance, logistics performance, supplier delays, and customer outcomes.
